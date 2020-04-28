@@ -9,6 +9,30 @@
 		</style>
 	</head>
 	<body>
+		<script id="vertexShader" type="x-shader/x-vertex">
+			// code for vertex shader
+			varying vec2 vUv;
+
+			void main() {
+				vUv = uv;
+				vec4 modelViewPosition = modelViewMatrix * vec4(position, 
+				1.0);
+				gl_Position = projectionMatrix * modelViewPosition;
+			}
+		</script>
+			
+		<script id="fragmentShader" type="x-shader/x-fragment">
+			// code for fragment shader
+			uniform sampler2D texture1;
+			varying vec2 vUv;
+
+			void main() {
+				// sample from the texture based on the uv coordinates
+				gl_FragColor = texture2D(texture1, vUv * 2.0);
+			}
+
+		</script>
+			
 		<script src="../three.js-master/build/three.js"></script>
 		<script>
 			// setup the scene
@@ -84,16 +108,19 @@
       		function (err) {
       			console.error('An error happened');
       		});
+			
+			addTextureShaderCubeTiled();
+
 
 			var geometry1, material1, mesh1;
 
 			function addTextureShaderCube() {
 				if(count == 2) {
-					let uniforms = {
-						colorB: {type: 'vec3', value: new THREE.Color(0xACB6E5)},
-						colorA: {type: 'vec3', value: new THREE.Color(0x74ebd5)}
-					};
-		
+					var uniforms = {
+						texture1: { type: "t", value: THREE.ImageUtils.loadTexture("176.jpg")
+					}
+				};
+
 					geometry1 = new THREE.BoxGeometry(1, 1, 1);
 					material1 =  new THREE.ShaderMaterial({
 						uniforms: uniforms,
@@ -105,7 +132,28 @@
 					mesh1.position.x = 2;
 					scene.add(mesh1);
 				}
-}
+			}
+
+			var geometry2, material2, mesh2;
+
+			function addTextureShaderCubeTiled() {
+					var uniforms = {
+						texture1: { type: "t", value: THREE.ImageUtils.loadTexture("176.jpg")
+					}
+				};
+
+					geometry2 = new THREE.BoxGeometry(1, 1, 1);
+					material2 =  new THREE.ShaderMaterial({
+						uniforms: uniforms,
+						vertexShader: document.getElementById('vertexShader').textContent,
+						fragmentShader: document.getElementById('fragmentShader').textContent,
+						precision: "mediump"
+					});
+					mesh2 = new THREE.Mesh(geometry2, material2);
+					mesh2.position.x = 4;
+					scene.add(mesh2);
+			}
+			
 
 
 

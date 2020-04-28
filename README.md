@@ -12,5 +12,11 @@ Cube2: The material is decorated using the specular and shiny variables
 Cube3: The material is decorated using the specular and shiny variables however I also added a   wireframe to it using the linecap setting "square"  
 
 # LAB 4
-24 A: X = 7U  
-24 B: 
+24 A: X = (7U)  
+24 B: y = 7(1-v)  
+24 C: Gray  
+From Left to Right  
+Cube 1: I used a non corresponding normal map and texture to create a uniquely lighted texture  
+Cube 2: I applied 156.JPG to a cube  
+Cube 3: I applied the corresponding normal map to the 156.JPG texture to create a differently lighted texture  
+Cube 4: I used the Frag and Vertex shader to light up a 176.JPG texture
