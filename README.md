@@ -20,4 +20,5 @@ Cube 1: I used a non corresponding normal map and texture to create a uniquely l
 Cube 2: I applied 156.JPG to a cube  
 Cube 3: I applied the corresponding normal map to the 156.JPG texture to create a differently lighted texture  
 Cube 4: I used the Frag and Vertex shader to light up a 176.JPG texture  
-https://drive.google.com/open?id=1BHgja3f-fTkDFRZu4-Fw9fZ5mpo9a1sI
+Cube 5: I used the same 176.jpg texture because it is easy to look at when tiling, I tiled it by setting the wrapping condition to 'Repeating' and I multiplied the uVu variable inside the Frag Shader by 2.0 to make it divide into quadrants on each face  
+https://drive.google.com/open?id=1F_F_SYucTUacOFQQh9UFv1aWPB859lUP  

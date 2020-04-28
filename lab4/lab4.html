@@ -137,21 +137,21 @@
 			var geometry2, material2, mesh2;
 
 			function addTextureShaderCubeTiled() {
-					var uniforms = {
-						texture1: { type: "t", value: THREE.ImageUtils.loadTexture("176.jpg")
-					}
+				var uniforms = {
+					texture1: { type: "t", value: THREE.ImageUtils.loadTexture("176.jpg") }
 				};
-
-					geometry2 = new THREE.BoxGeometry(1, 1, 1);
-					material2 =  new THREE.ShaderMaterial({
-						uniforms: uniforms,
-						vertexShader: document.getElementById('vertexShader').textContent,
-						fragmentShader: document.getElementById('fragmentShader').textContent,
-						precision: "mediump"
-					});
-					mesh2 = new THREE.Mesh(geometry2, material2);
-					mesh2.position.x = 4;
-					scene.add(mesh2);
+				uniforms.texture1.value.wrapS = uniforms.texture1.value.wrapT = THREE.RepeatWrapping;
+				
+				geometry2 = new THREE.BoxGeometry(1, 1, 1);
+				material2 =  new THREE.ShaderMaterial({
+					uniforms: uniforms,
+					vertexShader: document.getElementById('vertexShader').textContent,
+					fragmentShader: document.getElementById('fragmentShader').textContent,
+					precision: "mediump"
+				});
+				mesh2 = new THREE.Mesh(geometry2, material2);
+				mesh2.position.x = 4;
+				scene.add(mesh2);
 			}
 			
 
