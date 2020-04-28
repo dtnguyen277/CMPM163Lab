@@ -34,6 +34,7 @@
 		</script>
 			
 		<script src="../three.js-master/build/three.js"></script>
+		<script src="../three.js-master/examples/js/controls/OrbitControls.js"></script>
 		<script>
 			// setup the scene
             var scene = new THREE.Scene();
@@ -42,10 +43,12 @@
             var renderer = new THREE.WebGLRenderer();
             renderer.setSize(window.innerWidth, window.innerHeight);
             document.body.appendChild(renderer.domElement);
+			controls = new THREE.OrbitControls(camera, renderer.domElement);
 			camera.position.z = 5;
             var switchDir = 1;
-            var distance = 130;
-			var lightSpeed = .5;
+            var distance = 15;
+			var lightSpeed = .05;
+
 			
 			// setup the cube
             var geometry = new THREE.BoxGeometry();
@@ -54,7 +57,12 @@
             var material = new THREE.MeshPhongMaterial({map: texture, normalMap: normMap});
 
             var cube = new THREE.Mesh(geometry, material);
+			var material3 = new THREE.MeshBasicMaterial({color: 0x404040})
+			var geometry3 = new THREE.SphereGeometry(0.1, 0.1, 0.1);
+			test = new THREE.Mesh(geometry3, material3);
             scene.add(cube);
+			scene.add(test);
+			test.position.y += 2;
 
 			// cube 2
 			var material = new THREE.MeshPhongMaterial( { map: texture } );
@@ -171,7 +179,9 @@
                     light.position.x += lightSpeed;
                     if (light.position.x >= distance) { switchDir = 1; };
                 }
+				test.position.x = light.position.x;
 				requestAnimationFrame(animate);
+				controls.update();
 				renderer.render(scene, camera);
 			}
 			animate();
