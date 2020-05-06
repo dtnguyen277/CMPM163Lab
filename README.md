@@ -22,3 +22,9 @@ Cube 3: I applied the corresponding normal map to the 156.JPG texture to create 
 Cube 4: I used the Frag and Vertex shader to light up a 176.JPG texture  
 Cube 5: I used the same 176.jpg texture because it is easy to look at when tiling, I tiled it by setting the wrapping condition to 'Repeating' and I multiplied the uVu variable inside the Frag Shader by 2.0 to make it divide into quadrants on each face  
 https://drive.google.com/open?id=1F_F_SYucTUacOFQQh9UFv1aWPB859lUP  
+
+# LAB 5
+https://drive.google.com/open?id=1pm1i19cIcJvjkLzcZGeQmWa9xvJPcx08
+https://drive.google.com/open?id=1-ECedCf-sMjXYhUKpJU9kupdAHqEoTMk
+https://drive.google.com/open?id=15IVdkqmWJ6ZbHlcuJV3kjlJ7ohz5XaKT
+I set the position of each X and Y value to i - 500 so that it would show diagonally across the screen  then I used sin and cos functions to alter the velocity and acceleration.
