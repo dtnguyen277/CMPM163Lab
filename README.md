@@ -28,3 +28,8 @@ https://drive.google.com/open?id=1pm1i19cIcJvjkLzcZGeQmWa9xvJPcx08
 https://drive.google.com/open?id=1-ECedCf-sMjXYhUKpJU9kupdAHqEoTMk
 https://drive.google.com/open?id=15IVdkqmWJ6ZbHlcuJV3kjlJ7ohz5XaKT  
 I set the position of each X and Y value to i - 500 so that it would show diagonally across the screen  then I used sin and cos functions to alter the velocity and acceleration.
+
+# LAB 6  
+https://drive.google.com/file/d/1tvBQoyPn6ocUuHLxv2AcKRz1chKpuSP3/view?usp=sharing  
+https://www.shadertoy.com/view/3sBBRz  
+https://www.shadertoy.com/view/MdSXzz  
