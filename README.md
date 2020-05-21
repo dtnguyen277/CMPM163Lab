@@ -33,3 +33,7 @@ I set the position of each X and Y value to i - 500 so that it would show diagon
 https://drive.google.com/file/d/1tvBQoyPn6ocUuHLxv2AcKRz1chKpuSP3/view?usp=sharing  
 https://www.shadertoy.com/view/3sBBRz  
 https://www.shadertoy.com/view/MdSXzz  
+
+# LAB 7
+https://drive.google.com/open?id=1urIDRguinQ_LLuvMSYBMXgrw-EK_Jy0e
+I used the mesh manipulation techniques to create a small lake by scaling and changing the shader graph strength.
