@@ -37,3 +37,8 @@ https://www.shadertoy.com/view/MdSXzz
 # LAB 7
 https://drive.google.com/open?id=1urIDRguinQ_LLuvMSYBMXgrw-EK_Jy0e
 I used the mesh manipulation techniques to create a small lake by scaling and changing the shader graph strength.
+
+# LAB 8
+https://drive.google.com/open?id=15wyWHMCIGDwm-GOBEhCCcI9zdxXi-lQ6
+https://drive.google.com/open?id=1_gM35F5hrN_tOA6wQjvffA9bqRMfwp9Z
+In this image, I was inspired by the quadrants and spacing there was for cars so it looked like they houses were in groups divided by roads. I then color coded each building by its height.
